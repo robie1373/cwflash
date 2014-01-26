@@ -1,3 +1,23 @@
 #!/usr/bin/env ruby
 
-require 'cwflash'
+require_relative '../lib/cwflash'
+require "highline/import"
+
+begin
+  choices = Dir.entries File.join(File.dirname(__FILE__), "..", "sample")
+  choices.delete_if { |file| !(file =~ /\.json/) }
+
+  say("\nTime to practice some CW!\n")
+  choose do |menu|
+    menu.prompt = "\nWhich letters would you like to practice?  "
+
+    choices.each do |ch|
+      menu.choice ch do @filename = ch end
+    end
+
+  end
+
+  Cwflash::Runner.new(@filename).run
+rescue Interrupt
+  puts "\n\nGood bye"
+end
