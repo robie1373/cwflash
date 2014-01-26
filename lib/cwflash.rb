@@ -4,7 +4,7 @@ require "brasspounder"
 module Cwflash
   class Runner
     def initialize(filename="01-eish.json")
-      @path = File.absolute_path(File.join(File.dirname(__FILE__), "..", "sample", filename))
+      @path = File.absolute_path(File.join(File.dirname(__FILE__), "..", "samples", filename))
     end
     
     def run

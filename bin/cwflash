@@ -4,7 +4,7 @@ require_relative '../lib/cwflash'
 require "highline/import"
 
 begin
-  choices = Dir.entries File.join(File.dirname(__FILE__), "..", "sample")
+  choices = Dir.entries File.join(File.dirname(__FILE__), "..", "samples")
   choices.delete_if { |file| !(file =~ /\.json/) }
 
   say("\nTime to practice some CW!\n")

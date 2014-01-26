@@ -1,6 +1,12 @@
 # Cwflash
 
-TODO: Write a gem description
+Cwflash is a game to help you learn cw (aka Morse code) by using flash cards. It plays a character(s) or prosign and you can type in your answer. The flash cards are stored in JSON files. 
+
+You can find some examples in the samples directory of the gem. 
+
+To add cards, create a new JSON file (copy the format of a sample) and save it to the samples directory. It will automatically show up in the menu. 
+
+The samples are a full set of characters broken up into groups of about 4. There is a file of commonly used prosigns. Prosigns are sent without a break as they should be.
 
 ## Installation
 
@@ -18,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ cwflash
 
 ## Contributing
 
